@@ -1,0 +1,37 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import Hero from '../components/Hero.astro';
+import About from '../components/About.astro';
+import PostList from '../components/PostList.astro';
+import Community from '../components/Community.astro';
+import { getSite } from '../utils/consts';
+
+const site = await getSite();
+
+// Contoh data komunitas
+const contributors = [
+  { name: "Nanda Ma'de", avatar: "/profile.png", bio: "Founder, explorer of consciousness and philosophy." },
+  { name: "Alya Surya", avatar: "/contributors/alya.png", bio: "Writer of cosmic poetry and reflections." },
+  { name: "Bima Hartono", avatar: "/contributors/bima.png", bio: "Essayist on science and human nature." }
+];
+---
+
+<PageLayout title={site.title}>
+  <Hero
+    title={site.hero?.title ?? site.title ?? 'Typewriter'}
+    description={site.hero?.subtitle ?? site.description}
+    actions={site.hero?.actions ?? []}
+  />
+
+  <About author={site.author} />
+
+  <PostList
+    heading="Blog"
+    limit={3}
+    viewAllHref="/blog"
+  />
+
+  <!-- Tambahkan Community Section -->
+  <Community contributors={contributors} />
+
+</PageLayout>

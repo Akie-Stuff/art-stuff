@@ -1,0 +1,62 @@
+# -------------------------
+# Node dependencies
+# -------------------------
+node_modules/
+
+# -------------------------
+# Build / output folders
+# -------------------------
+dist/
+build/
+.out/
+
+# -------------------------
+# Environment variables (sangat sensitif)
+# -------------------------
+.env
+.env.local
+.env.*.local
+
+# -------------------------
+# Logs
+# -------------------------
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# -------------------------
+# OS generated files
+# -------------------------
+.DS_Store
+Thumbs.db
+
+# -------------------------
+# Editor / IDE settings
+# -------------------------
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# -------------------------
+# Caches / temp files
+# -------------------------
+.cache/
+.tmp/
+.pnp.*
+.vite/
+
+# -------------------------
+# Testing / coverage
+# -------------------------
+coverage/
+*.lcov
+
+# -------------------------
+# Misc
+# -------------------------
+*.bak
+*.swp
